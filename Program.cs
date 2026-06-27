@@ -38,11 +38,17 @@ namespace HelloCSharp
                         Calculate("%");
                         break;
                     case "6":
+                        Power();
+                        break;
+                    case "7":
+                        SquareRoot();
+                        break;
+                    case "8":
                         running = false;
                         Console.WriteLine("Thanks for using the calculator. Goodbye!");
                         break;
                     default:
-                        Console.WriteLine("Invalid choice. Please pick 1-5.");
+                        Console.WriteLine("Invalid choice. Please pick 1-8.");
                         break;
                 }
                 Console.WriteLine();
@@ -58,8 +64,33 @@ namespace HelloCSharp
             Console.WriteLine("  3) Multiply");
             Console.WriteLine("  4) Divide");
             Console.WriteLine("  5) Modulus (remainder)");
-            Console.WriteLine("  6) Exit");
+            Console.WriteLine("  6) Power (x ^ y)");
+            Console.WriteLine("  7) Square root");
+            Console.WriteLine("  8) Exit");
             Console.Write("Your choice: ");
+        }
+
+        // --- Scientific mode (added on the feature/scientific-mode branch) ---
+
+        // Raises the first number to the power of the second.
+        static void Power()
+        {
+            double baseValue = ReadNumber("Enter the base: ");
+            double exponent = ReadNumber("Enter the exponent: ");
+            double result = Math.Pow(baseValue, exponent);
+            Console.WriteLine($"Result: {baseValue} ^ {exponent} = {result}");
+        }
+
+        // Prints the square root of a number.
+        static void SquareRoot()
+        {
+            double n = ReadNumber("Enter a number: ");
+            if (n < 0)
+            {
+                Console.WriteLine("Error: cannot take the square root of a negative number.");
+                return;
+            }
+            Console.WriteLine($"Result: sqrt({n}) = {Math.Sqrt(n)}");
         }
 
         // Reads two numbers from the user and prints the result of the operation.
