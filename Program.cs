@@ -35,6 +35,9 @@ namespace HelloCSharp
                         Calculate("/");
                         break;
                     case "5":
+                        Calculate("%");
+                        break;
+                    case "6":
                         running = false;
                         Console.WriteLine("Thanks for using the calculator. Goodbye!");
                         break;
@@ -54,7 +57,8 @@ namespace HelloCSharp
             Console.WriteLine("  2) Subtract");
             Console.WriteLine("  3) Multiply");
             Console.WriteLine("  4) Divide");
-            Console.WriteLine("  5) Exit");
+            Console.WriteLine("  5) Modulus (remainder)");
+            Console.WriteLine("  6) Exit");
             Console.Write("Your choice: ");
         }
 
@@ -83,6 +87,14 @@ namespace HelloCSharp
                         return;
                     }
                     result = a / b;
+                    break;
+                case "%":
+                    if (b == 0)
+                    {
+                        Console.WriteLine("Error: cannot divide by zero.");
+                        return;
+                    }
+                    result = a % b;
                     break;
             }
 
