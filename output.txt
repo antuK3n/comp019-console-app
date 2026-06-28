@@ -1,0 +1,41 @@
+============================================
+   Welcome to the Simple C# Calculator!
+============================================
+Learning is fun!
+
+Choose an operation:
+  1) Add
+  2) Subtract
+  3) Multiply
+  4) Divide
+  5) Modulus (remainder)
+  6) Exit
+Your choice: Enter the first number: Enter the second number: Result: 12 + 8 = 20
+
+Choose an operation:
+  1) Add
+  2) Subtract
+  3) Multiply
+  4) Divide
+  5) Modulus (remainder)
+  6) Exit
+Your choice: Enter the first number: Enter the second number: Result: 17 % 5 = 2
+
+Choose an operation:
+  1) Add
+  2) Subtract
+  3) Multiply
+  4) Divide
+  5) Modulus (remainder)
+  6) Exit
+Your choice: Enter the first number: Enter the second number: Error: cannot divide by zero.
+
+Choose an operation:
+  1) Add
+  2) Subtract
+  3) Multiply
+  4) Divide
+  5) Modulus (remainder)
+  6) Exit
+Your choice: Thanks for using the calculator. Goodbye!
+

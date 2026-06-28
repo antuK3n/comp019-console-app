@@ -2,8 +2,6 @@ using System;
 
 namespace HelloCSharp
 {
-    // A simple C# console application for COMP 019.
-    // It greets the user and runs a small menu-driven calculator.
     class Program
     {
         static void Main(string[] args)
@@ -42,14 +40,13 @@ namespace HelloCSharp
                         Console.WriteLine("Thanks for using the calculator. Goodbye!");
                         break;
                     default:
-                        Console.WriteLine("Invalid choice. Please pick 1-5.");
+                        Console.WriteLine("Invalid choice. Please pick 1-6.");
                         break;
                 }
                 Console.WriteLine();
             }
         }
 
-        // Prints the menu of available options.
         static void ShowMenu()
         {
             Console.WriteLine("Choose an operation:");
@@ -62,7 +59,6 @@ namespace HelloCSharp
             Console.Write("Your choice: ");
         }
 
-        // Reads two numbers from the user and prints the result of the operation.
         static void Calculate(string op)
         {
             double a = ReadNumber("Enter the first number: ");
@@ -101,7 +97,6 @@ namespace HelloCSharp
             Console.WriteLine($"Result: {a} {op} {b} = {result}");
         }
 
-        // Safely reads a number from the console.
         static double ReadNumber(string prompt)
         {
             double value;
