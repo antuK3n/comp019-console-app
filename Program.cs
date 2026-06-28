@@ -2,8 +2,6 @@ using System;
 
 namespace HelloCSharp
 {
-    // A simple C# console application for COMP 019.
-    // It greets the user and runs a small menu-driven calculator.
     class Program
     {
         static void Main(string[] args)
@@ -55,7 +53,6 @@ namespace HelloCSharp
             }
         }
 
-        // Prints the menu of available options.
         static void ShowMenu()
         {
             Console.WriteLine("Choose an operation:");
@@ -70,30 +67,6 @@ namespace HelloCSharp
             Console.Write("Your choice: ");
         }
 
-        // --- Scientific mode (added on the feature/scientific-mode branch) ---
-
-        // Raises the first number to the power of the second.
-        static void Power()
-        {
-            double baseValue = ReadNumber("Enter the base: ");
-            double exponent = ReadNumber("Enter the exponent: ");
-            double result = Math.Pow(baseValue, exponent);
-            Console.WriteLine($"Result: {baseValue} ^ {exponent} = {result}");
-        }
-
-        // Prints the square root of a number.
-        static void SquareRoot()
-        {
-            double n = ReadNumber("Enter a number: ");
-            if (n < 0)
-            {
-                Console.WriteLine("Error: cannot take the square root of a negative number.");
-                return;
-            }
-            Console.WriteLine($"Result: sqrt({n}) = {Math.Sqrt(n)}");
-        }
-
-        // Reads two numbers from the user and prints the result of the operation.
         static void Calculate(string op)
         {
             double a = ReadNumber("Enter the first number: ");
@@ -132,7 +105,25 @@ namespace HelloCSharp
             Console.WriteLine($"Result: {a} {op} {b} = {result}");
         }
 
-        // Safely reads a number from the console.
+        static void Power()
+        {
+            double baseValue = ReadNumber("Enter the base: ");
+            double exponent = ReadNumber("Enter the exponent: ");
+            double result = Math.Pow(baseValue, exponent);
+            Console.WriteLine($"Result: {baseValue} ^ {exponent} = {result}");
+        }
+
+        static void SquareRoot()
+        {
+            double n = ReadNumber("Enter a number: ");
+            if (n < 0)
+            {
+                Console.WriteLine("Error: cannot take the square root of a negative number.");
+                return;
+            }
+            Console.WriteLine($"Result: sqrt({n}) = {Math.Sqrt(n)}");
+        }
+
         static double ReadNumber(string prompt)
         {
             double value;
